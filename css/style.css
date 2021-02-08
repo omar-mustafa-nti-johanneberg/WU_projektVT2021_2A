@@ -1,0 +1,69 @@
+/* Generell styling för alla element på sidan */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling för index.html sidan */
+
+/* Styling för mobil med Media queries */
+
+@media only screen and (max-width: 600px) {
+
+    #grid_wrapper_index {
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: auto auto auto auto auto auto ;
+    grid-gap: 0;
+    grid-template-areas:
+    "he"
+    "na"
+    "s1"
+    "s2"
+    "di"
+    "fo" ;
+    }
+
+    #header_index {
+        grid-area: he;
+        text-align: center;
+        background: cornsilk;
+    }
+
+    #nav_index {
+        grid-area: na;
+        text-align: center;
+        background: lightblue;
+    }
+
+    #section_1_index {
+        grid-area: s1;
+        text-align: center;
+        background: lightcoral
+    }
+
+    #section_2_index {
+        grid-area: s2;
+        text-align: center;
+        background: lightgreen;
+
+    }
+
+    #div_index {
+        grid-area: di;
+        text-align: center;
+        background: lightgoldenrodyellow;
+    }
+
+    #footer_index {
+        grid-area: fo;
+        text-align: center;
+        background: lightskyblue;
+    }
+
+
+
+}
+
+/* Styling för desktop layout  */
+
