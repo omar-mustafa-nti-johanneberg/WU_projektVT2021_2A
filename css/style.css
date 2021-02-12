@@ -2,13 +2,14 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 /* Styling för index.html sidan */
 
-/* Styling för mobil med Media queries */
+/* Styling för mobil layout med Media queries */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 376px) {
 
     #grid_wrapper_index {
     display: grid;
@@ -59,6 +60,21 @@
         grid-area: fo;
         text-align: center;
         background: lightskyblue;
+    }
+
+    #welcome {
+        font-size: 17px;
+    }
+
+    #telephone {
+        font-size: 17px;
+    }
+
+    #top-header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
     }
 
 
