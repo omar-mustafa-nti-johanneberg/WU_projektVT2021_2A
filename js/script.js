@@ -6,4 +6,4 @@ function toggleMeny() {
     lines.classList.toggle("toggle")
 }
 
-lines.addEventListener('click', toggleMeny)
+lines.addEventListener("click", toggleMeny)
