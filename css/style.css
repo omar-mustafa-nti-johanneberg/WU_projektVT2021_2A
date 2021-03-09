@@ -41,7 +41,7 @@ html, body {
 
     #header_index {
         grid-area: he;
-        box-shadow: -1px 1px 0 black;
+        box-shadow: -1px 1px 0 #939393;
     }
 
     #information {
@@ -220,4 +220,3 @@ html, body {
 }
 
 /* Styling för desktop layout  */
-
