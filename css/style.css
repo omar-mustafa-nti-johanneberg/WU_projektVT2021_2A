@@ -4,110 +4,120 @@
     padding: 0;
 }
 
-/* Kod nedan finns här, annars blir det white space under footern */
+/* Kod nedan behövs, annars blir det white space under footern */
 html, body {
     width: 100%;
     height: 100%;
+    min-height: 100%;
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    background-color: black;
 }
 
-/* Styling för index.html sidan (Desktop) */
+/* Styling för desktop layout  */
+
+/* Styling för index.html sidan */
 
 #grid_wrapper_index {
     display: grid;
     width: 100vw;
-    height: 100vh;
+    height: auto;
     gap: 0;
-    }
-
-/* Styling för mobil layout med Media queries */
-
-@media only screen and (max-width: 450px) {
-
-    /* Styling för index.html sidan */
-
-    #grid_wrapper_index {
-    grid-template-columns: 1fr;
-    grid-template-rows: 50px 50px 430px 1fr; 
-    grid-gap: 0; 
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 60px 60px 300px 100px 1fr; 
     grid-template-areas:
-    "he"
-    "na"
-    "s1"
-    "fo" ;
+    "he he"
+    "na na"
+    "ma s1"
+    "s2 s2"
+    "fo fo";
     }
 
     #header_index {
         grid-area: he;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         background-color: darkred;
         box-shadow: -1px 1px 0 #939393;
     }
 
-    #information {
-        font-size: 11px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
     #logo {
         position: relative;
-        left: 60px;
-        top: 10px;
+        left: 100px;
         font-size: 25px;
         color: white;
+        font-weight: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        letter-spacing: 1px;
     }
 
     #telefon {
         position: relative;
-        top: 5px;
-        right: 10px;
+        top: 2px;
+        right: 5px;
     }
 
     #telefon_nummer {
-        font-size: 22px;
-        color: white;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         position: relative;
-        left: 200px;
-        bottom: 20px;
+        right: 30px;
+        color: white;
+        font-size: 25px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    #mail {
+        position: relative;
+        left: 60px;
+        color: white;
+        font-size: 25px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        letter-spacing: 1px;
     }
 
     #nav_index {
         grid-area: na;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
         background-color: darkred;
         box-shadow: -1px 1px 0 #939393;
     }
 
     #slogan {
         position: relative;
-        top: 10px;
-        left: 15px;
-        font-size: 20px;
+        right: 150px;
         color: white;
+        font-size: 25px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: bold;
+        letter-spacing: 1px;
     }
 
     .lines {
         position: relative;
-        left: 310px;
-        bottom: 14px;
+        left: 150px;
     }
 
     .lines div {
         background-color: white;
-        height: 3px;
-        width: 25px;
+        height: 4px;
+        width: 33px;
         margin: 5px;
         border-radius: 10%;
         transition: all 0.3s;
     }
+
+    .lines:hover {
+        cursor: pointer;
+    }
     
     .toggle .line-1 {
-        transform: rotate(-45deg) translate(-5px, 6px);
-        cursor: pointer;
+        transform: rotate(-45deg) translate(-6px, 7px);
     }
     
     .toggle .line-2 {
@@ -115,15 +125,14 @@ html, body {
     }
     
     .toggle .line-3 {
-        transform: rotate(45deg) translate(-5px, -6px);
-        cursor: pointer;
+        transform: rotate(45deg) translate(-6px, -6px);
     }
 
     .nav-links {
+        position: absolute;
+        right: 500vw;  
         height: 100%;
-        width: 230px; 
-        position: absolute;  
-        right: 300vw;  
+        width: 300px;   
         background-color: white;
         list-style-type: none;
         transition: all 0.2s;
@@ -131,58 +140,81 @@ html, body {
         z-index: 2;
     }
 
-    .nav-links a {
-        display: inline-block;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        padding: 10px 0px 0px 20px;
-        text-decoration: none;
-        font-size: 20px;
-        color: darkred;
-        font-weight: bold;
-    }
-
-    .nav-active {
-        transform: translateX(260vw);
-    }
-
     #page_name {
         color: black;
         font-size: 24px;
         font-weight: normal;
     }
-    
-    #section_1_index {
-        grid-area: s1;
-        background-repeat: no-repeat;
-        background-size: cover;
-        text-align: center;
-        position: relative;
+
+    #page_name:hover {
+        text-decoration: none;
     }
 
-    #section_1_index p, h1 {
+    .nav-links a {
+        display: inline-block;
+        padding: 10px 0px 0px 20px;
+        color: darkred;
+        text-decoration: none;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .nav-links a:hover {
+        text-decoration: underline;
+    }
+
+    .nav-active {
+        transform: translateX(423vw);
+    }
+    
+    #main_1_index {
+        grid-area: ma;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        text-align: center;
+        overflow:hidden;
+        background-color: white;
+        border-radius: 20px;
+        margin: 14px;
+    }
+
+    #main_1_index p, h1 {
         position: absolute;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     #banner_rubrik {
-        top: 25px;
-        left: 30px;
+        top: 8px;
+        left: 16px;
         font-weight: normal;
         font-size: 25px;
         z-index: 1;
     }
 
     #banner_text { 
-        top: 80px;
+        top: 50px;
         z-index: 1;
-        font-size: 16px;
+        font-size: 18px;
     }
 
     #frukt_bild_1 {
         z-index: 0;
-        height: 100%;
+        height: 300px;
+        border-radius: 10%;
         width: 100%;
-        opacity: 15%;
+        opacity: 25%;
+    }
+
+    #section_1_index {
+        grid-area: s1;
+        background-color: lightblue;
+    }
+
+    #section_2_index {
+        grid-area: s2;
+        background-color: lightgreen;
     }
 
     #footer_index {
@@ -213,21 +245,155 @@ html, body {
     #documentation_link {
         display: inline-block;
         position: relative;
+        top: 10px;
         text-decoration: none;
         color: white;
         font-size: 25px;
-        top: 10px;
+        cursor: pointer;
+    }
+
+    #documentation_link:hover {
+        text-decoration: underline;
     }
 
     #copyright {
         position: relative;
-        top: 20px;
-        text-align: center;
-        
+        top: -10px;
+        padding-top: 20px;
+    }
+
+/* Styling för mobil layout med Media queries */
+
+@media only screen and (max-width: 600px) {
+
+    body {
+        background-color: white;
+    }
+
+    /* Styling för index.html sidan */
+
+    #grid_wrapper_index {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 50px 430px 1fr; 
+    height: 100vh;
+    grid-template-areas:
+    "he"
+    "na"
+    "ma"
+    "fo" ;
+    }
+
+    #header_index {
+        display: block;
+    }
+
+    #logo {
+        left: 60px;
+        top: 10px;
+        letter-spacing: 0px;
+    }
+
+    #telefon {
+        top: 5px;
+        right: 10px;
+    }
+
+    #telefon_nummer {
+        left: 200px;
+        bottom: 20px;
+        font-size: 22px;
+        letter-spacing: 0px;
+    }
+
+    #mail {
+        display: none;
+    }
+
+    #nav_index {
+        display: block;
+    }
+
+    #slogan {
+        top: 10px;
+        left: 15px;
+        font-size: 20px;
+        letter-spacing: 0px;
+    }
+
+    .lines {
+        left: 310px;
+        bottom: 14px;
+    }
+
+    .lines:hover {
+        cursor: initial;
+    }
+
+    .lines div {
+        height: 3px;
+        width: 25px;
+    }
+    
+    .toggle .line-1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+        cursor: pointer;
+    }
+    
+    .toggle .line-3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+        cursor: pointer;
+    }
+
+    .nav-links {
+        width: 230px; 
+        right: 300vw;  
+    }
+
+    .nav-links a:hover {
+        text-decoration: none;
+    }
+
+    .nav-active {
+        transform: translateX(260vw);
+    }
+
+    #main_1_index {
+        border-radius: 0px;
+        background-color: white;
+        margin: 0px;
+    }
+
+    #banner_rubrik {
+        top: 25px;
+        left: 30px;
+    }
+
+    #banner_text { 
+        top: 80px;
+        z-index: 1;
+        font-size: 18px;
+    }
+
+    #frukt_bild_1 {
+        z-index: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 15%;
+        border-radius: 0px;
+    }
+
+    #section_1_index {
+        display: none;
+    }
+
+    #section_2_index {
+        display: none;
+    }
+
+    #documentation_link:hover {
+        text-decoration: none;
     }
 
     /* Styling för bilder.html sidan */
 
 }
-
-/* Styling för desktop layout  */
