@@ -12,7 +12,6 @@ html, body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
-    background-color: black;
 }
 
 /* Styling för desktop layout  */
@@ -25,7 +24,7 @@ html, body {
     height: auto;
     gap: 0;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 60px 60px 300px 100px 1fr; 
+    grid-template-rows: 60px 60px 600px 400px 1fr; 
     grid-template-areas:
     "he he"
     "na na"
@@ -40,7 +39,7 @@ html, body {
         justify-content: space-between;
         align-items: center;
         background-color: darkred;
-        box-shadow: -1px 1px 0 #939393;
+        box-shadow: 0px 1px 0 #939393;
     }
 
     #logo {
@@ -84,8 +83,11 @@ html, body {
         display: flex;
         justify-content: space-around;
         align-items: center;
+        position: sticky;
+        top: 0;
         background-color: darkred;
         box-shadow: -1px 1px 0 #939393;
+        z-index: 3;
     }
 
     #slogan {
@@ -130,9 +132,9 @@ html, body {
 
     .nav-links {
         position: absolute;
-        right: 500vw;  
+        right: 496vw;  
         height: 100%;
-        width: 300px;   
+        width: 350px;   
         background-color: white;
         list-style-type: none;
         transition: all 0.2s;
@@ -166,12 +168,11 @@ html, body {
 
     .nav-active {
         transform: translateX(423vw);
+        z-index: 3;
     }
     
     #main_1_index {
         grid-area: ma;
-        background-repeat: no-repeat;
-        background-size: cover;
         position: relative;
         text-align: center;
         overflow:hidden;
@@ -185,6 +186,25 @@ html, body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
+    #frukt_bild_1 {
+        z-index: 0;
+        background-size: cover;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    #image_shadow {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        height: 40%;
+        border-radius: 10px;
+        z-index: 2;
+        font-size: 16px;
+        background-color: rgba(34, 34, 34, 0.7);
+        color: white;
+    }
+
     #banner_rubrik {
         top: 8px;
         left: 16px;
@@ -193,28 +213,24 @@ html, body {
         z-index: 1;
     }
 
-    #banner_text { 
+    #banner_text {
         top: 50px;
-        z-index: 1;
-        font-size: 18px;
     }
 
-    #frukt_bild_1 {
-        z-index: 0;
-        height: 300px;
-        border-radius: 10%;
-        width: 100%;
-        opacity: 25%;
+    #extra_text {
+        top: 120px;
     }
 
     #section_1_index {
         grid-area: s1;
         background-color: lightblue;
+        border-radius: 20px;
+        margin: 14px 30px 14px 14px;
     }
 
     #section_2_index {
         grid-area: s2;
-        background-color: lightgreen;
+        background-color: darkred;
     }
 
     #footer_index {
@@ -265,10 +281,6 @@ html, body {
 /* Styling för mobil layout med Media queries */
 
 @media only screen and (max-width: 600px) {
-
-    body {
-        background-color: white;
-    }
 
     /* Styling för index.html sidan */
 
@@ -360,26 +372,31 @@ html, body {
     #main_1_index {
         border-radius: 0px;
         background-color: white;
-        margin: 0px;
-    }
-
-    #banner_rubrik {
-        top: 25px;
-        left: 30px;
-    }
-
-    #banner_text { 
-        top: 80px;
-        z-index: 1;
-        font-size: 18px;
+        margin: 10px;
     }
 
     #frukt_bild_1 {
-        z-index: 0;
         height: 100%;
         width: 100%;
-        opacity: 15%;
-        border-radius: 0px;
+    }
+
+    #image_shadow {
+        border-radius: 4px;
+        height: 50%;
+    }
+
+    #banner_rubrik {
+        top: 0px;
+        left: 30px;
+    }
+
+    #banner_text {
+        top: 50px;
+        text-align: center;
+    }
+
+    #extra_text {
+        display: none;
     }
 
     #section_1_index {
