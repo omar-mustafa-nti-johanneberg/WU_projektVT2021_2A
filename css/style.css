@@ -14,7 +14,30 @@ html, body {
     overflow-x: hidden;
 }
 
-/* Styling för desktop layout  */
+/* Övrig styling för scrollbar som endast gäller för
+enheter med minsta bredd på 800px, med andra ord endast för
+Desktop. */
+
+
+@media only screen and (min-width: 800px) {
+
+    ::-webkit-scrollbar {
+        width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #888; 
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+    }
+
+}
+
+/* Styling för desktop layout */
 
 /* Styling för index.html sidan */
 
@@ -496,7 +519,7 @@ html, body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
     
-        #frukt_bild_1 {
+        #apples {
             z-index: 0;
             background-size: cover;
             width: 100%;
@@ -593,16 +616,15 @@ html, body {
     #grid_wrapper_bilder {
         display: grid;
         width: 100vw;
-        height: auto;
+        height: 100vh;
         gap: 0;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 60px 60px 600px 400px 1fr; 
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px 60px auto 1fr; 
         grid-template-areas:
-        "he he"
-        "na na"
-        "ma s1"
-        "s2 s2"
-        "fo fo";
+        "he"
+        "na"
+        "s1"
+        "fo";
         }
     
         #header_bilder {
@@ -742,67 +764,22 @@ html, body {
             transform: translateX(423vw);
             z-index: 3;
         }
-        
-        #main_1_bilder {
-            grid-area: ma;
-            position: relative;
-            text-align: center;
-            overflow:hidden;
-            background-color: white;
-            border-radius: 20px;
-            margin: 14px;
-        }
-    
-        #main_1_bilder p, h1 {
-            position: absolute;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-    
-        #frukt_bild_1 {
-            z-index: 0;
-            background-size: cover;
-            width: 100%;
-            border-radius: 10px;
-        }
-    
-        #image_shadow {
-            position: absolute;
-            bottom: 0px;
-            width: 100%;
-            height: 40%;
-            border-radius: 10px;
-            z-index: 2;
-            font-size: 16px;
-            background-color: rgba(34, 34, 34, 0.7);
-            color: white;
-        }
-    
-        #banner_rubrik {
-            top: 8px;
-            left: 16px;
-            font-weight: normal;
-            font-size: 25px;
-            z-index: 1;
-        }
-    
-        #banner_text {
-            top: 50px;
-        }
-    
-        #extra_text {
-            top: 120px;
-        }
     
         #section_1_bilder {
             grid-area: s1;
-            background-color: lightblue;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: rgb(188 186 194);
             border-radius: 20px;
-            margin: 14px 30px 14px 14px;
+            margin: 14px;
         }
-    
-        #section_2_bilder {
-            grid-area: s2;
-            background-color: darkred;
+
+        .fruit_images {
+            width: 300px;
+            height: 250px;
+            border-radius: 10px;
+            margin: 10px;
         }
     
         #footer_bilder {
@@ -1160,6 +1137,315 @@ html, body {
         padding-top: 20px;
     }
 
+    /* Styling för jobba_hos_oss.html sidan (Desktop) */
+
+    #grid_wrapper_jobb {
+        display: grid;
+        width: 100vw;
+        height: 100vh;
+        gap: 0;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 60px 60px 600px 620px 1fr; 
+        grid-template-areas:
+        "he he"
+        "na na"
+        "ma s1"
+        "s2 s2"
+        "fo fo";
+        }
+
+    #header_jobb {
+        grid-area: he;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: darkred;
+        box-shadow: 0px 1px 0 #939393;
+    }
+
+    #logo {
+        position: relative;
+        left: 100px;
+        font-size: 25px;
+        color: white;
+        font-weight: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        letter-spacing: 1px;
+    }
+
+    #telefon {
+        position: relative;
+        top: 2px;
+        right: 5px;
+    }
+
+    #telefon_nummer {
+        position: relative;
+        right: 30px;
+        color: white;
+        font-size: 25px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    #mail {
+        position: relative;
+        left: 60px;
+        color: white;
+        font-size: 25px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    #nav_jobb {
+        grid-area: na;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        background-color: darkred;
+        box-shadow: -1px 1px 0 #939393;
+        z-index: 3;
+    }
+
+    #slogan {
+        position: relative;
+        right: 150px;
+        color: white;
+        font-size: 25px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    .lines {
+        position: relative;
+        left: 150px;
+    }
+
+    .lines div {
+        background-color: white;
+        height: 4px;
+        width: 33px;
+        margin: 5px;
+        border-radius: 10%;
+        transition: all 0.3s;
+    }
+
+    .lines:hover {
+        cursor: pointer;
+    }
+    
+    .toggle .line-1 {
+        transform: rotate(-45deg) translate(-6px, 7px);
+    }
+    
+    .toggle .line-2 {
+        opacity: 0;
+    }
+    
+    .toggle .line-3 {
+        transform: rotate(45deg) translate(-6px, -6px);
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 496vw;  
+        height: 100%;
+        width: 350px;   
+        background-color: white;
+        list-style-type: none;
+        transition: all 0.2s;
+        box-shadow: 0 0 20px rgb(0 0 0 / 30%);
+        z-index: 2;
+    }
+
+    #page_name {
+        color: black;
+        font-size: 24px;
+        font-weight: normal;
+    }
+
+    #page_name:hover {
+        text-decoration: none;
+    }
+
+    .nav-links a {
+        display: inline-block;
+        padding: 10px 0px 0px 20px;
+        color: darkred;
+        text-decoration: none;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .nav-links a:hover {
+        text-decoration: underline;
+    }
+
+    .nav-active {
+        transform: translateX(423vw);
+        z-index: 4;
+    }
+    
+    #main_1_jobb {
+        grid-area: ma;
+        position: relative;
+        text-align: center;
+        overflow:hidden;
+        background-color: white;
+        border-radius: 20px;
+        margin: 14px;
+    }
+
+    #main_1_jobb p, h1 {
+        position: absolute;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #apples {
+        z-index: 0;
+        background-size: cover;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    #image_shadow {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        height: 40%;
+        border-radius: 10px;
+        z-index: 0;
+        font-size: 16px;
+        background-color: rgba(34, 34, 34, 0.7);
+        color: white;
+    }
+
+    #banner_rubrik {
+        top: 8px;
+        left: 16px;
+        font-weight: normal;
+        font-size: 25px;
+    }
+
+    #banner_text {
+        top: 50px;
+    }
+
+    #extra_text {
+        top: 120px;
+    }
+
+    #section_1_jobb {
+        grid-area: s1;
+        background-color: lightblue;
+        border-radius: 20px;
+        margin: 14px 30px 14px 14px;
+        z-index: 0;
+    }
+
+    #section_2_jobb {
+        display: block;
+        grid-area: s2;
+        background-color: darkred;
+        position: relative;
+    }
+
+    #section_2_jobb p, h1 {
+        position: absolute;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #watermelon {
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+    }
+
+    #image_shadow_2 {
+        position: absolute;
+        bottom: 0px;
+        width: 50%;
+        height: 100%;
+        z-index: 0;
+        background-color: rgba(34, 34, 34, 0.7);
+        color: white;
+    }
+
+    #image_title {
+        font-weight: normal;
+        font-size: 34px;
+        right: 200px;
+        top: 100px;
+        letter-spacing: 1px;
+    }
+
+    #image_text {
+        top: 180px;
+        text-align: center;
+    }
+
+    #image_text_2 {
+        top: 300px;
+        text-align: center;
+    }
+
+    #image_text_3 {
+        top: 450px;
+        text-align: center;
+    }
+
+    #footer_jobb {
+        grid-area: fo;
+        text-align: center;
+        background: black;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #company_name {
+        font-size: 25px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: normal;
+        text-align: left;
+        margin: 20px 0px 0px 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    #random_text {
+        font-size: 14px;
+        margin-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    #documentation_link {
+        display: inline-block;
+        position: relative;
+        top: 10px;
+        text-decoration: none;
+        color: white;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    #documentation_link:hover {
+        text-decoration: underline;
+    }
+
+    #copyright {
+        position: relative;
+        top: -10px;
+        padding-top: 20px;
+    }
+
 /* Styling för mobil layout med Media queries */
 
 @media only screen and (max-width: 600px) {
@@ -1257,7 +1543,7 @@ html, body {
         margin: 10px;
     }
 
-    #frukt_bild_1 {
+    #apples {
         height: 100%;
         width: 100%;
     }
@@ -1386,7 +1672,7 @@ html, body {
         margin: 10px;
     }
 
-    #frukt_bild_1 {
+    #apples {
         height: 100%;
         width: 100%;
     }
@@ -1426,12 +1712,12 @@ html, body {
 
     #grid_wrapper_bilder {
         grid-template-columns: 1fr;
-        grid-template-rows: 50px 50px 430px 1fr; 
+        grid-template-rows: 50px 50px auto 1fr; 
         height: 100vh;
         grid-template-areas:
         "he"
         "na"
-        "ma"
+        "s1"
         "fo" ;
     }
     
@@ -1509,42 +1795,8 @@ html, body {
         transform: translateX(260vw);
     }
 
-    #main_1_bilder {
-        border-radius: 0px;
-        background-color: white;
-        margin: 10px;
-    }
-
-    #frukt_bild_1 {
-        height: 100%;
-        width: 100%;
-    }
-
-    #image_shadow {
-        border-radius: 4px;
-        height: 50%;
-    }
-
-    #banner_rubrik {
-        top: 0px;
-        left: 30px;
-    }
-
-    #banner_text {
-        top: 50px;
-        text-align: center;
-    }
-
-    #extra_text {
-        display: none;
-    }
-
     #section_1_bilder {
-        display: none;
-    }
-
-    #section_2_bilder {
-        display: none;
+        grid-area: s1;
     }
 
     #documentation_link:hover {
@@ -1680,19 +1932,133 @@ html, body {
     text-decoration: none;
 }
 
-}
+/* Styling för jobba_hos_oss.html (Mobilsidan) */
 
-/* Övrig styling för scrollbar */
-::-webkit-scrollbar {
-    width: 7px;
-  }
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-  }
-   ::-webkit-scrollbar-thumb {
-    background: #888; 
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
+#grid_wrapper_jobb {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 50px 430px 1fr; 
+    height: 100vh;
+    grid-template-areas:
+    "he"
+    "na"
+    "ma"
+    "fo" ;
+    }
+
+    #header_jobb {
+        display: block;
+    }
+
+    #logo {
+        left: 60px;
+        top: 10px;
+        letter-spacing: 0px;
+    }
+
+    #telefon {
+        top: 5px;
+        right: 10px;
+    }
+
+    #telefon_nummer {
+        left: 200px;
+        bottom: 20px;
+        font-size: 22px;
+        letter-spacing: 0px;
+    }
+
+    #mail {
+        display: none;
+    }
+
+    #nav_jobb {
+        display: block;
+    }
+
+    #slogan {
+        top: 10px;
+        left: 15px;
+        font-size: 20px;
+        letter-spacing: 0px;
+    }
+
+    .lines {
+        left: 310px;
+        bottom: 14px;
+    }
+
+    .lines:hover {
+        cursor: initial;
+    }
+
+    .lines div {
+        height: 3px;
+        width: 25px;
+    }
+    
+    .toggle .line-1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+        cursor: pointer;
+    }
+    
+    .toggle .line-3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+        cursor: pointer;
+    }
+
+    .nav-links {
+        width: 230px; 
+        right: 300vw;  
+    }
+
+    .nav-links a:hover {
+        text-decoration: none;
+    }
+
+    .nav-active {
+        transform: translateX(260vw);
+    }
+
+    #main_1_jobb {
+        border-radius: 0px;
+        background-color: white;
+        margin: 10px;
+    }
+
+    #apples {
+        height: 100%;
+        width: 100%;
+    }
+
+    #image_shadow {
+        border-radius: 4px;
+        height: 50%;
+    }
+
+    #banner_rubrik {
+        top: 0px;
+        left: 30px;
+    }
+
+    #banner_text {
+        top: 50px;
+        text-align: center;
+    }
+
+    #extra_text {
+        display: none;
+    }
+
+    #section_1_jobb {
+        display: none;
+    }
+
+    #section_2_jobb {
+        display: none;
+    }
+
+    #documentation_link:hover {
+        text-decoration: none;
+    }
+
+}
