@@ -51,8 +51,8 @@ Desktop. */
     grid-template-areas:
     "he he"
     "na na"
-    "ma s1"
-    "s2 s2"
+    "ma ma"
+    "s1 s1"
     "fo fo";
     }
 
@@ -209,18 +209,19 @@ Desktop. */
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    #apples {
+    #apples_index {
         z-index: 0;
         background-size: cover;
         width: 100%;
+        height: 800px;
         border-radius: 10px;
     }
 
-    #image_shadow {
+    #image_shadow_index {
         position: absolute;
         bottom: 0px;
         width: 100%;
-        height: 40%;
+        height: 60%;
         border-radius: 10px;
         z-index: 0;
         font-size: 16px;
@@ -235,30 +236,22 @@ Desktop. */
         font-size: 25px;
     }
 
-    #banner_text {
-        top: 50px;
+    #text_desktop_index {
+        top: 60px;
     }
 
-    #extra_text {
-        top: 120px;
+    #text_mobile_index {
+        display: none;
     }
 
     #section_1_index {
-        grid-area: s1;
-        background-color: lightblue;
-        border-radius: 20px;
-        margin: 14px 30px 14px 14px;
-        z-index: 0;
-    }
-
-    #section_2_index {
         display: block;
-        grid-area: s2;
+        grid-area: s1;
         background-color: darkred;
         position: relative;
     }
 
-    #section_2_index p, h1 {
+    #section_1_index p, h1 {
         position: absolute;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
@@ -270,7 +263,7 @@ Desktop. */
         background-repeat: no-repeat;
     }
 
-    #image_shadow_2 {
+    #image_shadow_2_index {
         position: absolute;
         bottom: 0px;
         width: 50%;
@@ -1454,8 +1447,7 @@ Desktop. */
 
     #grid_wrapper_index {
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 50px 430px 1fr; 
-    height: 100vh;
+    grid-template-rows: 50px 50px 500px 1fr; 
     grid-template-areas:
     "he"
     "na"
@@ -1543,13 +1535,12 @@ Desktop. */
         margin: 10px;
     }
 
-    #apples {
+    #apples_index {
         height: 100%;
         width: 100%;
     }
 
-    #image_shadow {
-        border-radius: 4px;
+    #image_shadow_index {
         height: 50%;
     }
 
@@ -1558,20 +1549,18 @@ Desktop. */
         left: 30px;
     }
 
-    #banner_text {
+    #text_desktop_index {
+        display: none;
+    }
+
+    #text_mobile_index {
+        display: block;
+        color: white;
         top: 50px;
         text-align: center;
     }
 
-    #extra_text {
-        display: none;
-    }
-
     #section_1_index {
-        display: none;
-    }
-
-    #section_2_index {
         display: none;
     }
 
