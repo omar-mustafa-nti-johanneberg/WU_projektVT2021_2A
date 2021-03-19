@@ -15,6 +15,7 @@ html, body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    position: relative;
 }
 
 /* Styling för scrollbar som endast gäller för
@@ -42,7 +43,7 @@ Desktop. */
 
 /* Styling för Desktop layout */
 
-/* Generell styling för alla sidor */
+/* Generell styling för alla sidor (Desktop) */
 
 header {
     grid-area: he;
@@ -180,22 +181,15 @@ nav {
 
 footer {
     grid-area: fo;
-    text-align: center;
-    background: black;
+    background-color: black;
     color: white;
 }
 
 #company_name {
-    font-size: 25px;
+    position: relative;
+    left: 10px;
     font-weight: normal;
-    text-align: left;
-    margin: 20px 0px 0px 20px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-#random_text {
-    font-size: 14px;
+    margin: 10px 0px 0px 0px;
     margin-top: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -204,7 +198,8 @@ footer {
 #documentation_link {
     display: inline-block;
     position: relative;
-    top: 10px;
+    top: 5px;
+    left: 540px;
     text-decoration: none;
     color: white;
     font-size: 25px;
@@ -217,8 +212,8 @@ footer {
 
 #copyright {
     position: relative;
-    top: -10px;
-    padding-top: 20px;
+    left: 570px;
+    font-size: 18px;
 }
 
 /* Styling för index.html (Desktop) */
@@ -233,13 +228,13 @@ footer {
     grid-template-areas:
     "he he"
     "na na"
-    "ma ma"
-    "s1 s1"
+    "a1 a1"
+    "a2 a2"
     "fo fo";
     }
     
-    #main_1_index {
-        grid-area: ma;
+    #article_1_index {
+        grid-area: a1;
         position: relative;
         text-align: center;
         overflow:hidden;
@@ -248,7 +243,7 @@ footer {
         margin: 14px;
     }
 
-    #main_1_index p, h1 {
+    #article_1_index p, h1 {
         position: absolute;
     }
 
@@ -287,14 +282,14 @@ footer {
         display: none;
     }
 
-    #section_1_index {
+    #article_2_index {
         display: block;
-        grid-area: s1;
+        grid-area: a2;
         background-color: darkred;
         position: relative;
     }
 
-    #section_1_index p, h1 {
+    #article_2_index p, h1 {
         position: absolute;
     }
 
@@ -395,8 +390,6 @@ footer {
             flex-wrap: wrap;
             justify-content: center;
             background-color: rgb(188 186 194);
-            border-radius: 20px;
-            margin: 14px;
         }
 
         .fruit_images {
@@ -406,12 +399,19 @@ footer {
             margin: 10px;
         }
 
+        #footer_bilder #copyright {
+            position: relative;
+            padding-top: 20px;
+            left: 577px;
+            bottom: 10px;
+            font-size: 18px;
+        }
+
 /* Styling för produkter.html (Desktop) */
 
     #grid_wrapper_produkter {
         display: grid;
         width: 100vw;
-        height: 100vh;
         gap: 0;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 60px 60px 600px 620px 1fr; 
@@ -428,17 +428,42 @@ footer {
     #grid_wrapper_jobb {
         display: grid;
         width: 100vw;
-        height: 100vh;
         gap: 0;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 60px 60px 600px 620px 1fr; 
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px 60px 800px 1fr; 
         grid-template-areas:
-        "he he"
-        "na na"
-        "ma s1"
-        "s2 s2"
-        "fo fo";
+        "he"
+        "na"
+        "ar"
+        "fo";
         }
+
+    #article_jobb {
+        grid-area: ar;
+        position: relative;
+        background-color: rgb(187, 184, 184);
+        margin: 14px;
+        border-radius: 20px;
+    }
+
+    #article_jobb h1, h2, p {
+        position: absolute;
+        margin: 10px;
+    }
+
+    #article_jobb h2 {
+        top: 50px;
+    }
+
+    #article_jobb p {
+        top: 100px;
+    }
+
+    #arbetsuppgifter {
+        margin: 10px;
+        top: 150px;
+        left: 20px;
+    }
 
 /* Styling för mobil layout med Media queries */
 
@@ -521,7 +546,13 @@ footer {
     }
 
     #documentation_link {
+        left: 95px;
+        top: 5px;
         text-decoration: underline;
+    }
+
+    #copyright {
+        left: 120px;
     }
 
 /* Styling för index.html (Mobilsida) */
@@ -532,11 +563,11 @@ footer {
     grid-template-areas:
     "he"
     "na"
-    "ma"
+    "a1"
     "fo" ;
     }
 
-    #main_1_index {
+    #article_1_index {
         border-radius: 0px;
         background-color: white;
         margin: 10px;
@@ -567,7 +598,7 @@ footer {
         text-align: center;
     }
 
-    #section_1_index {
+    #article_2_index {
         display: none;
     }
 
@@ -619,7 +650,7 @@ footer {
     grid-template-areas:
     "he"
     "na"
-    "ma"
+    "ar"
     "fo" ;
     }
 
