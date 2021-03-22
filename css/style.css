@@ -409,16 +409,34 @@ footer {
     #grid_wrapper_produkter {
         display: grid;
         width: 100vw;
+        height: 100vh;
         gap: 0;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 60px 60px 600px 620px 1fr; 
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px 60px 4000px 1fr; 
         grid-template-areas:
-        "he he"
-        "na na"
-        "ma s1"
-        "s2 s2"
-        "fo fo";
+        "he"
+        "na"
+        "se"
+        "fo";
         }
+
+    #section_produkter {
+        background-color: rgb(196, 196, 196);
+    }
+
+    #name {
+        background-color: lightskyblue;
+        height: 100px;
+        margin-bottom: 100px;
+    }
+
+    .produkter img {
+        margin: 10px 0px 10px 0px;
+    }
+
+    #produkt-container {
+        background-color: white;
+    }
     
 /* Styling för jobba_hos_oss.html (Desktop) */
 
