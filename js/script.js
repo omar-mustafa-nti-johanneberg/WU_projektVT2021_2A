@@ -1,9 +1,9 @@
 const lines = document.querySelector(".lines")
-const nav = document.querySelector(".nav-links")
+const links = document.querySelector(".mobil-links")
 
 function toggleMeny() {
-    nav.classList.toggle("nav-active")
     lines.classList.toggle("toggle")
+    links.classList.toggle("nav-active")
 }
 
 lines.addEventListener("click", toggleMeny)

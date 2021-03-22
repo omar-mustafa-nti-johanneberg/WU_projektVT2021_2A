@@ -50,7 +50,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: darkred;
+    background-color: #dd3636;
     box-shadow: 0px 1px 0 #939393;
 }
 
@@ -87,29 +87,56 @@ header {
     letter-spacing: 1px;
 }
 
-
-nav {
+#nav_desktop {
     grid-area: na;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    background-color: darkred;
     position: sticky;
     top: 0;
-    background-color: darkred;
+    z-index: 2;
     box-shadow: -1px 1px 0 #939393;
-    z-index: 3;
+    display: flex;
+    align-items: center;
+}
+
+#nav_mobil {
+    display: none;
+}
+
+.mobil-links {
+    display: none;
 }
 
 #slogan {
     position: relative;
-    right: 150px;
+    left: 200px;
     color: white;
     font-size: 25px;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
+.links_desktop {
+    display: flex;
+    list-style-type: none;
+    z-index: 2;
+}
+
+.links_desktop a {
+    position: relative;
+    left: 350px;
+    padding: 0px 10px 0px 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.links_desktop a:hover {
+    text-decoration: underline;
+}
+
 .lines {
+    display: none;
     position: relative;
     left: 150px;
 }
@@ -139,18 +166,6 @@ nav {
     transform: rotate(45deg) translate(-6px, -6px);
 }
 
-.nav-links {
-    position: absolute;
-    right: 496vw;  
-    height: 100%;
-    width: 350px;   
-    background-color: white;
-    list-style-type: none;
-    transition: all 0.2s;
-    box-shadow: 0 0 20px rgb(0 0 0 / 30%);
-    z-index: 2;
-}
-
 #page_name {
     color: black;
     font-size: 24px;
@@ -159,24 +174,6 @@ nav {
 
 #page_name:hover {
     text-decoration: none;
-}
-
-.nav-links a {
-    display: inline-block;
-    padding: 10px 0px 0px 20px;
-    color: darkred;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.nav-links a:hover {
-    text-decoration: underline;
-}
-
-.nav-active {
-    transform: translateX(423vw);
-    z-index: 4;
 }
 
 footer {
@@ -442,8 +439,6 @@ footer {
         grid-area: ar;
         position: relative;
         background-color: rgb(187, 184, 184);
-        margin: 14px;
-        border-radius: 20px;
     }
 
     #article_jobb h1, h2, p {
@@ -475,10 +470,6 @@ footer {
         display: block;
     }
 
-    nav {
-        display: block;
-    }
-
     #logo {
         left: 60px;
         top: 10px;
@@ -501,6 +492,15 @@ footer {
         letter-spacing: 0px;
     }
 
+    #nav_desktop {
+        display: none;
+    }
+
+    #nav_mobil {
+        display: block;
+        background-color: darkred;
+    }
+
     #slogan {
         top: 10px;
         left: 15px;
@@ -508,7 +508,35 @@ footer {
         letter-spacing: 0px;
     }
 
+    .mobil-links {
+        display: block;
+        position: absolute;
+        right: 446px;  
+        height: 100%;
+        width: 230px;
+        background-color: white;
+        list-style-type: none;
+        transition: all 0.2s;
+        box-shadow: 0 0 20px rgb(0 0 0 / 30%);
+        z-index: 3;
+    }
+
+    .mobil-links a {
+        display: inline-block;
+        padding: 10px 0px 0px 20px;
+        color: darkred;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .nav-active {
+        transform: translateX(300px);
+        z-index: 4;
+    }
+
     .lines {
+        display: block;
         left: 310px;
         bottom: 14px;
     }
@@ -530,19 +558,6 @@ footer {
     .toggle .line-3 {
         transform: rotate(45deg) translate(-5px, -6px);
         cursor: pointer;
-    }
-
-    .nav-links {
-        width: 230px; 
-        right: 300vw;  
-    }
-
-    .nav-links a:hover {
-        text-decoration: none;
-    }
-
-    .nav-active {
-        transform: translateX(260vw);
     }
 
     #documentation_link {
