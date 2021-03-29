@@ -54,13 +54,14 @@ header {
     box-shadow: 0px 1px 0 #939393;
 }
 
-#logo {
+#logo_desktop {
     position: relative;
     left: 100px;
-    font-size: 25px;
-    color: white;
-    font-weight: bold;
-    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+#logo_mobil {
+    display: none;
 }
 
 #telefon {
@@ -221,7 +222,7 @@ footer {
     height: 100vh;
     gap: 0;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 60px 60px 600px 620px 1fr; 
+    grid-template-rows: auto 60px 600px 620px 1fr; 
     grid-template-areas:
     "he he"
     "na na"
@@ -338,7 +339,7 @@ footer {
         height: auto;
         gap: 0;
         grid-template-columns: 1fr auto;
-        grid-template-rows: 60px 60px 500px auto 1fr; 
+        grid-template-rows: auto 60px 500px auto 1fr; 
         grid-template-areas:
         "he"
         "na"
@@ -397,7 +398,7 @@ footer {
         height: 100vh;
         gap: 0;
         grid-template-columns: 1fr;
-        grid-template-rows: 60px 60px auto 1fr; 
+        grid-template-rows: auto 60px auto 1fr; 
         grid-template-areas:
         "he"
         "na"
@@ -436,7 +437,7 @@ footer {
         height: 100vh;
         gap: 0;
         grid-template-columns: 1fr;
-        grid-template-rows: 60px 60px 1000px 1fr; 
+        grid-template-rows: auto 60px 1000px 1fr; 
         grid-template-areas:
         "he"
         "na"
@@ -474,7 +475,7 @@ footer {
         width: 100vw;
         gap: 0;
         grid-template-columns: 1fr;
-        grid-template-rows: 60px 60px 800px 1fr; 
+        grid-template-rows: auto 60px 800px 1fr; 
         grid-template-areas:
         "he"
         "na"
@@ -517,10 +518,15 @@ footer {
         display: block;
     }
 
-    #logo {
-        left: 60px;
+    #logo_desktop {
+        display: none;
+    }
+    
+    #logo_mobil {
+        display: block;
+        position: relative;
+        left: 20px;
         top: 10px;
-        letter-spacing: 0px;
     }
 
     #mail {
@@ -534,7 +540,7 @@ footer {
 
     #telefon_nummer {
         left: 200px;
-        bottom: 20px;
+        top: -35px;
         font-size: 22px;
         letter-spacing: 0px;
     }
@@ -621,7 +627,7 @@ footer {
 
     #grid_wrapper_index {
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 50px 500px 1fr; 
+    grid-template-rows: auto 50px 500px 1fr; 
     grid-template-areas:
     "he"
     "na"
@@ -668,7 +674,7 @@ footer {
 
 #grid_wrapper_kontakt {
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 50px 500px auto 1fr; 
+    grid-template-rows: auto 50px 500px auto 1fr; 
     height: 100vh;
     grid-template-areas:
     "he"
@@ -682,7 +688,7 @@ footer {
 
     #grid_wrapper_bilder {
         grid-template-columns: 1fr;
-        grid-template-rows: 50px 50px auto 1fr; 
+        grid-template-rows: auto 50px auto 1fr; 
         height: 100vh;
         grid-template-areas:
         "he"
@@ -695,7 +701,7 @@ footer {
 
     #grid_wrapper_produkter {
         grid-template-columns: 1fr;
-        grid-template-rows: 50px 50px 430px 1fr; 
+        grid-template-rows: auto 50px 430px 1fr; 
         height: 100vh;
         grid-template-areas:
         "he"
@@ -708,7 +714,7 @@ footer {
 
 #grid_wrapper_jobb {
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 50px 430px 1fr; 
+    grid-template-rows: auto 50px 430px 1fr; 
     height: 100vh;
     grid-template-areas:
     "he"
