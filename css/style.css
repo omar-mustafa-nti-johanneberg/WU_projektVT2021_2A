@@ -338,21 +338,20 @@ footer {
         height: auto;
         gap: 0;
         grid-template-columns: 1fr auto;
-        grid-template-rows: 60px 60px 600px 1fr; 
+        grid-template-rows: 60px 60px 500px auto 1fr; 
         grid-template-areas:
         "he"
         "na"
         "s1"
+        "s2"
         "fo";
         }
 
         #section_1_kontakt {
             grid-area: s1;
             position: relative;
-            background-color: rgb(201 206 205);
-            border-radius: 20px;
-            margin: 14px 25px 14px 14px;
-         
+            font-weight: bold;
+            background-color: #e3e3e3;
         }
 
         #section_1_kontakt h1 {
@@ -361,8 +360,33 @@ footer {
 
         #section_1_kontakt h2 {
             margin: 10px;
-            top: 100px;
+            top: 60px;
             position: absolute;
+        }
+
+        #section_1_kontakt p {
+            font-size: 22px;
+        }
+
+        #kontakt_mail {
+            font-size: 22px;
+            top: 120px;
+        }
+
+        #kontakt_telefon {
+            top: 170px;
+        }
+
+        #kontakt_adress {
+            top: 220px;
+        }
+        
+        #karta {
+            top: 280px;
+        }
+
+        #section_2_kontakt {
+            grid-area: s2;
         }
 
 /* Styling för bilder.html (Desktop) */
@@ -412,7 +436,7 @@ footer {
         height: 100vh;
         gap: 0;
         grid-template-columns: 1fr;
-        grid-template-rows: 60px 60px 4000px 1fr; 
+        grid-template-rows: 60px 60px 1000px 1fr; 
         grid-template-areas:
         "he"
         "na"
@@ -421,13 +445,19 @@ footer {
         }
 
     #section_produkter {
-        background-color: rgb(196, 196, 196);
+        grid-area: se;
     }
 
     #name {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: lightskyblue;
         height: 100px;
-        margin-bottom: 100px;
+    }
+
+    #name h1 {
+        font-size: 30px;
     }
 
     .produkter img {
@@ -435,7 +465,6 @@ footer {
     }
 
     #produkt-container {
-        background-color: white;
     }
     
 /* Styling för jobba_hos_oss.html (Desktop) */
@@ -639,12 +668,13 @@ footer {
 
 #grid_wrapper_kontakt {
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 50px 500px 1fr; 
+    grid-template-rows: 50px 50px 500px auto 1fr; 
     height: 100vh;
     grid-template-areas:
     "he"
     "na"
     "s1"
+    "s2"
     "fo" ;
     }
 
