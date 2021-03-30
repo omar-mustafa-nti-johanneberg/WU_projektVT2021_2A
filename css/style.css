@@ -183,21 +183,30 @@ footer {
     color: white;
 }
 
+#company_name_parent {
+    display: flex;
+    justify-content: flex-start;
+}
+
 #company_name {
     position: relative;
     left: 10px;
-    font-weight: normal;
-    margin: 10px 0px 0px 0px;
-    margin-top: 10px;
-    padding-bottom: 10px;
+    margin: 10px 0px 10px 0px;
+    padding-bottom: 5px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    font-weight: normal;
+}
+
+#documentation_link_parent {
+    display: flex;
+    justify-content: center;
 }
 
 #documentation_link {
     display: inline-block;
     position: relative;
     top: 5px;
-    left: 540px;
     text-decoration: none;
     color: white;
     font-size: 25px;
@@ -206,11 +215,16 @@ footer {
 
 #documentation_link:hover {
     text-decoration: underline;
+    cursor: pointer;
+}
+
+#copyright_parent {
+    display: flex;
+    justify-content: center;
 }
 
 #copyright {
     position: relative;
-    left: 570px;
     font-size: 18px;
 }
 
@@ -421,14 +435,6 @@ footer {
             margin: 10px;
         }
 
-        #footer_bilder #copyright {
-            position: relative;
-            padding-top: 20px;
-            left: 577px;
-            bottom: 10px;
-            font-size: 18px;
-        }
-
 /* Styling för produkter.html (Desktop) */
 
     #grid_wrapper_produkter {
@@ -465,9 +471,6 @@ footer {
         margin: 10px 0px 10px 0px;
     }
 
-    #produkt-container {
-    }
-    
 /* Styling för jobba_hos_oss.html (Desktop) */
 
     #grid_wrapper_jobb {
@@ -527,6 +530,7 @@ footer {
         position: relative;
         left: 20px;
         top: 10px;
+        width: 70px;
     }
 
     #mail {
@@ -539,7 +543,7 @@ footer {
     }
 
     #telefon_nummer {
-        left: 200px;
+        left: 180px;
         top: -35px;
         font-size: 22px;
         letter-spacing: 0px;
@@ -613,16 +617,6 @@ footer {
         cursor: pointer;
     }
 
-    #documentation_link {
-        left: 95px;
-        top: 5px;
-        text-decoration: underline;
-    }
-
-    #copyright {
-        left: 120px;
-    }
-
 /* Styling för index.html (Mobilsida) */
 
     #grid_wrapper_index {
@@ -686,29 +680,31 @@ footer {
 
 /* Styling för bilder.html (Mobilsida) */
 
-    #grid_wrapper_bilder {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 50px auto 1fr; 
-        height: 100vh;
-        grid-template-areas:
-        "he"
-        "na"
-        "s1"
-        "fo" ;
+#grid_wrapper_bilder {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 50px auto 1fr; 
+    height: 100vh;
+    grid-template-areas:
+    "he"
+    "na"
+    "s1"
+    "fo" ;
     }
 
 /* Styling för produkter.html (Mobilsida) */
 
-    #grid_wrapper_produkter {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 50px 430px 1fr; 
-        height: 100vh;
-        grid-template-areas:
-        "he"
-        "na"
-        "ma"
-        "fo" ;
-    }
+#grid_wrapper_produkter {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 50px auto 1fr; 
+    height: 100vh;
+    grid-template-areas:
+    "he"
+    "na"
+    "se"
+    "fo" ;
+}
+
+#section_produkter 
 
 /* Styling för jobba_hos_oss.html (Mobilsidan) */
 
