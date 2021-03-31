@@ -79,13 +79,11 @@ header {
     letter-spacing: 1px;
 }
 
-#mail {
+#fresh_fruit {
     position: relative;
-    left: 60px;
+    left: 40px;
     color: white;
-    font-size: 25px;
-    font-weight: bold;
-    letter-spacing: 1px;
+    font-size: 35px;
 }
 
 #nav_desktop {
@@ -271,7 +269,7 @@ footer {
         position: absolute;
         bottom: 0px;
         width: 100%;
-        height: 60%;
+        height: 65%;
         border-radius: 10px;
         z-index: 0;
         font-size: 16px;
@@ -347,169 +345,219 @@ footer {
 
 /* Styling för kontakt.html (Desktop) */
 
-    #grid_wrapper_kontakt {
-        display: grid;
-        width: 100vw;
-        height: auto;
-        gap: 0;
-        grid-template-columns: 1fr auto;
-        grid-template-rows: auto 60px 500px auto 1fr; 
-        grid-template-areas:
-        "he"
-        "na"
-        "s1"
-        "s2"
-        "fo";
-        }
-
-        #section_1_kontakt {
-            grid-area: s1;
-            position: relative;
-            font-weight: bold;
-            background-color: #e3e3e3;
-        }
-
-        #section_1_kontakt h1 {
-            margin: 10px;
-        }
-
-        #section_1_kontakt h2 {
-            margin: 10px;
-            top: 60px;
-            position: absolute;
-        }
-
-        #section_1_kontakt p {
-            font-size: 22px;
-        }
-
-        #kontakt_mail {
-            font-size: 22px;
-            top: 120px;
-        }
-
-        #kontakt_telefon {
-            top: 170px;
-        }
-
-        #kontakt_adress {
-            top: 220px;
-        }
-        
-        #karta {
-            top: 280px;
-        }
-
-        #section_2_kontakt {
-            grid-area: s2;
-        }
-
-/* Styling för bilder.html (Desktop) */
-
-    #grid_wrapper_bilder {
-        display: grid;
-        width: 100vw;
-        height: 100vh;
-        gap: 0;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 60px auto 1fr; 
-        grid-template-areas:
-        "he"
-        "na"
-        "s1"
-        "fo";
-        }
-    
-        #section_1_bilder {
-            grid-area: s1;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            background-color: rgb(188 186 194);
-        }
-
-        .fruit_images {
-            width: 300px;
-            height: 250px;
-            border-radius: 10px;
-            margin: 10px;
-        }
-
-/* Styling för produkter.html (Desktop) */
-
-    #grid_wrapper_produkter {
-        display: grid;
-        width: 100vw;
-        height: 100vh;
-        gap: 0;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 60px 1000px 1fr; 
-        grid-template-areas:
-        "he"
-        "na"
-        "se"
-        "fo";
-        }
-
-    #section_produkter {
-        grid-area: se;
+#grid_wrapper_kontakt {
+    display: grid;
+    width: 100vw;
+    height: auto;
+    gap: 0;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 60px 400px auto 1fr; 
+    grid-template-areas:
+    "he"
+    "na"
+    "s1"
+    "s2"
+    "fo";
     }
 
-    #name {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: lightskyblue;
-        height: 100px;
+    #section_1_kontakt {
+        grid-area: s1;
+        font-weight: bold;
+        background-color: #e3e3e3;
+        padding-left: 10px;
     }
 
-    #name h1 {
-        font-size: 30px;
-    }
-
-    .produkter img {
-        margin: 10px 0px 10px 0px;
-    }
-
-/* Styling för jobba_hos_oss.html (Desktop) */
-
-    #grid_wrapper_jobb {
-        display: grid;
-        width: 100vw;
-        gap: 0;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 60px 800px 1fr; 
-        grid-template-areas:
-        "he"
-        "na"
-        "ar"
-        "fo";
-        }
-
-    #article_jobb {
-        grid-area: ar;
+    #section_1_kontakt h1 {
         position: relative;
-        background-color: rgb(187, 184, 184);
+        padding-top: 10px;
     }
 
-    #article_jobb h1, h2, p {
-        position: absolute;
-        margin: 10px;
+    #section_1_kontakt h2 {
+        position: relative;
+        top: 30px;
+        margin: 0px;
     }
 
-    #article_jobb h2 {
-        top: 50px;
+    #section_1_kontakt p {
+        position: relative;
+        font-size: 22px;
     }
 
-    #article_jobb p {
+    #kontakt_mail {
+        font-size: 22px;
+        top: 70px;
+    }
+
+    #kontakt_telefon {
         top: 100px;
     }
 
-    #arbetsuppgifter {
-        margin: 10px;
-        top: 150px;
-        left: 20px;
+    #kontakt_adress {
+        top: 120px;
     }
+    
+    #karta {
+        top: 170px;
+    }
+
+    #section_2_kontakt {
+        grid-area: s2;
+    }
+
+    #iframe {
+         width: 100%;
+         height: 450px;
+    }
+
+/* Styling för bilder.html (Desktop) */
+
+#grid_wrapper_bilder {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    gap: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 60px auto 1fr; 
+    grid-template-areas:
+    "he"
+    "na"
+    "s1"
+    "fo";
+    }
+
+#section_1_bilder {
+    grid-area: s1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(188 186 194);
+}
+
+.fruit_images {
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+/* Styling för produkter.html (Desktop) */
+
+#grid_wrapper_produkter {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    gap: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 60px 1000px 1fr; 
+    grid-template-areas:
+    "he"
+    "na"
+    "se"
+    "fo";
+    }
+
+#section_produkter {
+    grid-area: se;
+}
+
+#name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightskyblue;
+    height: 100px;
+}
+
+#name h1 {
+    font-size: 30px;
+}
+
+.produkter img {
+    margin: 10px 0px 10px 0px;
+}
+
+/* Styling för jobba_hos_oss.html (Desktop) */
+
+#grid_wrapper_jobb {
+    display: grid;
+    width: 100vw;
+    gap: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 60px 310px auto 1fr; 
+    grid-template-areas:
+    "he"
+    "na"
+    "ar"
+    "se"
+    "fo";
+    }
+
+#article_jobb {
+    grid-area: ar;
+    background-color: rgb(187, 184, 184);
+}
+
+#article_jobb h1, h2 {
+    position: relative;
+    margin: 10px;
+}
+
+#article_jobb h2 {
+    top: 20px;
+}
+
+#section_jobb {
+    grid-area: se;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "l1"
+    "l2"
+    "l3"
+    "l4";
+}
+
+.work_tasks {
+    font-weight: normal;
+    color: black;
+    font-size: 23px;
+    list-style-type: none;
+}
+
+#list_parent_1 {
+    grid-area: l1;
+    background-color: lightseagreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#list_parent_1 li {
+    font-weight: bold;
+}
+
+#list_parent_2 {
+    grid-area: l2;
+    background-color: lightsalmon;
+    display: flex;
+    justify-content: center;
+}
+
+#list_parent_2 img {
+    position: relative;
+    left: 300px;
+}
+
+#list_parent_3 {
+    grid-area: l3;
+    background-color: lightskyblue;
+} 
+
+#list_parent_4 {
+    grid-area: l4;
+    background-color: lightyellow;
+}
 
 /* Styling för mobil layout med Media queries */
 
@@ -533,7 +581,7 @@ footer {
         width: 70px;
     }
 
-    #mail {
+    #fresh_fruit {
         display: none;
     }
 
@@ -568,7 +616,7 @@ footer {
     .mobil-links {
         display: block;
         position: absolute;
-        right: 446px;  
+        right: 4400px;  
         height: 100%;
         width: 230px;
         background-color: white;
@@ -588,7 +636,7 @@ footer {
     }
 
     .nav-active {
-        transform: translateX(300px);
+        transform: translateX(4254px);
         z-index: 4;
     }
 
