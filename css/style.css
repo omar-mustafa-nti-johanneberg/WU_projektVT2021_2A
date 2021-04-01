@@ -233,14 +233,14 @@ footer {
     width: 100vw;
     height: 100vh;
     gap: 0;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto 60px 600px 620px 1fr; 
     grid-template-areas:
-    "he he"
-    "na na"
-    "a1 a1"
-    "a2 a2"
-    "fo fo";
+    "he"
+    "na"
+    "a1"
+    "a2"
+    "fo";
     }
     
     #article_1_index {
@@ -483,7 +483,7 @@ footer {
     width: 100vw;
     gap: 0;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 60px 310px auto 1fr; 
+    grid-template-rows: auto 60px 200px auto 1fr; 
     grid-template-areas:
     "he"
     "na"
@@ -509,55 +509,81 @@ footer {
 #section_jobb {
     grid-area: se;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
     grid-template-areas: 
-    "l1"
-    "l2"
-    "l3"
-    "l4";
+    "t1 i1"
+    "i2 t2"
+    "t3 i3";
+}
+
+#tasks {
+    text-align: center;
+    position: relative;
+    top: 60px;
+}
+
+.titles {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.titles p {
+    margin: 10px;
 }
 
 .work_tasks {
-    font-weight: normal;
-    color: black;
-    font-size: 23px;
-    list-style-type: none;
-}
-
-#list_parent_1 {
-    grid-area: l1;
-    background-color: lightseagreen;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#list_parent_1 li {
-    font-weight: bold;
-}
-
-#list_parent_2 {
-    grid-area: l2;
-    background-color: lightsalmon;
-    display: flex;
-    justify-content: center;
-}
-
-#list_parent_2 img {
     position: relative;
-    left: 300px;
+    font-size: 23px;
+    text-align: center;
 }
 
-#list_parent_3 {
-    grid-area: l3;
-    background-color: lightskyblue;
-} 
+#title_1 {
+    grid-area: t1;
+    background-color: lightsalmon;
+}
 
-#list_parent_4 {
-    grid-area: l4;
+#image_holder_1 {
+    grid-area: i1;
+    background-color: lightsalmon;
+}
+
+#title_2 {
+    grid-area: t2;
+    background-color: rgb(71, 231, 124);
+}
+
+#image_holder_2 {
+    grid-area: i2;
+    background-color: rgb(71, 231, 124);
+}
+
+#title_3 {
+    grid-area: t3;
     background-color: lightyellow;
 }
+
+#image_holder_3 {
+    grid-area: i3;
+    background-color: lightyellow;
+}
+
+/* Styling av bilderna */
+
+.images {
+    position: relative;
+    margin: 10px 0px 10px 0px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} 
+
+#image_1 {
+    width: 300px;
+    height: 300px;
+}
+
 
 /* Styling för mobil layout med Media queries */
 
@@ -716,7 +742,7 @@ footer {
 
 #grid_wrapper_kontakt {
     grid-template-columns: 1fr;
-    grid-template-rows: auto 50px 500px auto 1fr; 
+    grid-template-rows: auto 50px 520px auto 1fr; 
     height: 100vh;
     grid-template-areas:
     "he"
@@ -750,21 +776,51 @@ footer {
     "na"
     "se"
     "fo" ;
-}
-
-#section_produkter 
+    }
 
 /* Styling för jobba_hos_oss.html (Mobilsidan) */
 
 #grid_wrapper_jobb {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 50px 430px 1fr; 
-    height: 100vh;
-    grid-template-areas:
-    "he"
-    "na"
-    "ar"
-    "fo" ;
+    grid-template-rows: auto 60px auto auto 1fr; 
+    }
+
+    #article_jobb h1, h2 {
+        font-size: 18px;
+    }
+
+    #article_jobb h2 {
+        top: 0px;
+    }
+
+    #tasks h1 {
+        margin: 0px;
+        bottom: 65px;
+    }
+
+    .work_tasks {
+        font-size: 20px;
+    }
+    
+    #section_jobb {
+        display: block;
+    }
+    
+    #image_holder_1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #image_holder_2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #image_holder_3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
 }
