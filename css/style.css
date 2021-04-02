@@ -448,7 +448,7 @@ footer {
     height: 100vh;
     gap: 0;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 60px 1000px 1fr; 
+    grid-template-rows: auto 60px auto 1fr; 
     grid-template-areas:
     "he"
     "na"
@@ -457,23 +457,86 @@ footer {
     }
 
 #section_produkter {
-    grid-area: se;
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr 3fr 3fr 3fr;
+    grid-template-areas:
+    "h1 h1"
+    "i1 t1 "
+    "i2 t2"
+    "i3 t3"
+    "i4 t4";
+}
+
+.produkt_container {
+    margin: 5px;
+}
+
+.produkt_bilder {
+    width: 100%;
+    height: 100%;
+}
+
+.produkt_text {
+    margin: 10px;
+}
+
+.produkt_titles {
+    margin: 5px;
 }
 
 #name {
+    grid-area: h1;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: lightskyblue;
-    height: 100px;
+    margin: 10px;
 }
 
 #name h1 {
     font-size: 30px;
 }
 
-.produkter img {
-    margin: 10px 0px 10px 0px;
+#produkt1 {
+    grid-area: i1;
+}
+
+#title_produkt_1 {
+    grid-area: t1;
+    background-color: lightgreen;
+}
+
+#produkt2 {
+    grid-area: i2;
+}
+
+#title_produkt_2 {
+    grid-area: t2;
+    background-color: lightsalmon;
+}
+
+#produkt3 {
+    grid-area: i3;
+}
+
+#title_produkt_3 {
+    grid-area: t3;
+    background-color: lightskyblue;
+}
+
+#produkt4 {
+    grid-area: i4;
+}
+
+#title_produkt_4 {
+    grid-area: t4;
+    background-color: lightgrey;
+}
+
+#footer_produkter {
+    margin-top: 5px;
 }
 
 /* Styling för jobba_hos_oss.html (Desktop) */
@@ -642,7 +705,7 @@ footer {
     .mobil-links {
         display: block;
         position: absolute;
-        right: 4400px;  
+        right: 200vw;  
         height: 100%;
         width: 230px;
         background-color: white;
@@ -662,7 +725,7 @@ footer {
     }
 
     .nav-active {
-        transform: translateX(4254px);
+        transform: translateX(161vw);
         z-index: 4;
     }
 
@@ -768,15 +831,19 @@ footer {
 /* Styling för produkter.html (Mobilsida) */
 
 #grid_wrapper_produkter {
-    grid-template-columns: 1fr;
     grid-template-rows: auto 50px auto 1fr; 
-    height: 100vh;
-    grid-template-areas:
-    "he"
-    "na"
-    "se"
-    "fo" ;
-    }
+}
+
+.produkt_container {
+    background-color: lightsalmon;
+    margin: 10px;
+}
+
+.produkt_bilder {
+    width: 200px;
+    height: 200px;
+}
+
 
 /* Styling för jobba_hos_oss.html (Mobilsidan) */
 
