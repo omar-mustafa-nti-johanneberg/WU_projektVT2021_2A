@@ -421,56 +421,56 @@ footer {
     "fo";
     }
 
-    #section_1_kontakt {
-        grid-area: s1;
-        font-weight: bold;
-        background-color: #e3e3e3;
-        padding-left: 10px;
-    }
+#section_1_kontakt {
+    grid-area: s1;
+    font-weight: bold;
+    background-color: #e3e3e3;
+    padding-left: 10px;
+}
 
-    #section_1_kontakt h2 {
-        position: relative;
-        top: 30px;
-        margin: 0px;
-    }
+#section_1_kontakt h2 {
+    position: relative;
+    top: 30px;
+    margin: 0px;
+}
 
-    #section_1_kontakt h3 {
-        position: relative;
-        top: 50px;
-        margin: 0px;
-        font-size: 23px;
-    }
+#section_1_kontakt h3 {
+    position: relative;
+    top: 50px;
+    margin: 0px;
+    font-size: 23px;
+}
 
-    #section_1_kontakt p {
-        position: relative;
-        font-size: 22px;
-    }
+#section_1_kontakt p {
+    position: relative;
+    font-size: 22px;
+}
 
-    #kontakt_mail {
-        font-size: 22px;
-        top: 70px;
-    }
+#kontakt_mail {
+    font-size: 22px;
+    top: 70px;
+}
 
-    #kontakt_telefon {
-        top: 100px;
-    }
+#kontakt_telefon {
+    top: 100px;
+}
 
-    #kontakt_adress {
-        top: 120px;
-    }
-    
-    #karta {
-        top: 170px;
-    }
+#kontakt_adress {
+    top: 120px;
+}
 
-    #section_2_kontakt {
-        grid-area: s2;
-    }
+#karta {
+    top: 170px;
+}
 
-    #iframe {
-         width: 100%;
-         height: 450px;
-    }
+#section_2_kontakt {
+    grid-area: s2;
+}
+
+#iframe {
+        width: 100%;
+        height: 450px;
+}
 
 /* Styling för bilder.html (Desktop) */
 
@@ -750,177 +750,177 @@ footer {
 
 /* Generell styling för alla mobilsidor */
 
-    header {
-        display: block;
-        width: 100%;
-        height: 90px;
-        position: relative;
-    }
+header {
+    display: block;
+    width: 100%;
+    height: 90px;
+    position: relative;
+}
 
-    #logo_desktop {
-        display: none;
-    }
-    
-    #logo_mobil {
-        display: block;
-        position: absolute;
-        left: 5%;
-        top: 20%;
-        width: auto;
-    }
+#logo_desktop {
+    display: none;
+}
 
-    #fresh_fruit {
-        display: none;
-    }
+#logo_mobil {
+    display: block;
+    position: absolute;
+    left: 5%;
+    top: 20%;
+    width: auto;
+}
 
-    #telefon {
-        top: 5px;
-        right: 10px;
-    }
+#fresh_fruit {
+    display: none;
+}
 
-    #telefon_nummer {
-        position: absolute;
-        right: 5%;
-        top: 40%;
-        font-size: 22px;
-        letter-spacing: 0px;
-    }
+#telefon {
+    top: 5px;
+    right: 10px;
+}
 
-    #nav_desktop {
-        display: none;
-    }
+#telefon_nummer {
+    position: absolute;
+    right: 5%;
+    top: 40%;
+    font-size: 22px;
+    letter-spacing: 0px;
+}
 
-    #nav_mobil {
-        display: block;
-        position: relative;
-        background-color: darkred;
-    }
+#nav_desktop {
+    display: none;
+}
 
-    #slogan_mobil {
-        position:absolute;
-        top: 20%;
-        left: 5%;
-        font-size: 20px;
-        letter-spacing: 0px;
-    }
+#nav_mobil {
+    display: block;
+    position: relative;
+    background-color: darkred;
+}
 
-    .mobil-links {
-        display: block;
-        position: absolute;
-        left: -300%;  
-        height: 100%;
-        width: 230px;
-        background-color: white;
-        list-style-type: none;
-        transition: all 0.7s;
-        box-shadow: 0 0 20px rgb(0 0 0 / 30%);
-        z-index: 3;
-    }
+#slogan_mobil {
+    position:absolute;
+    top: 20%;
+    left: 5%;
+    font-size: 20px;
+    letter-spacing: 0px;
+}
 
-    .mobil-links a {
-        display: inline-block;
-        padding: 10px 0px 0px 0px;
-        width: 100%;
-        margin-left: 14px;
-        color: darkred;
-        text-decoration: none;
-        font-size: 20px;
-        font-weight: bold;
-    }
+.mobil-links {
+    display: block;
+    position: absolute;
+    left: -300%;  
+    height: 100%;
+    width: 230px;
+    background-color: white;
+    list-style-type: none;
+    transition: all 0.7s;
+    box-shadow: 0 0 20px rgb(0 0 0 / 30%);
+    z-index: 3;
+}
 
-    .nav-active {
-        left:0;
-        transition: all 0.7s;
-        z-index: 4;
-    }
+.mobil-links a {
+    display: inline-block;
+    padding: 10px 0px 0px 0px;
+    width: 100%;
+    margin-left: 14px;
+    color: darkred;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
 
-    .lines {
-        display: block;
-        position: absolute;
-        right: 5%;
-        bottom: 20%;
-    }
+.nav-active {
+    left:0;
+    transition: all 0.7s;
+    z-index: 4;
+}
 
-    .lines:hover {
-        cursor: initial;
-    }
+.lines {
+    display: block;
+    position: absolute;
+    right: 5%;
+    bottom: 20%;
+}
 
-    .lines div {
-        height: 3px;
-        width: 25px;
-    }
-    
-    .toggle .line-1 {
-        transform: rotate(-45deg) translate(-5px, 6px);
-        cursor: pointer;
-    }
-    
-    .toggle .line-3 {
-        transform: rotate(45deg) translate(-5px, -6px);
-        cursor: pointer;
-    }
+.lines:hover {
+    cursor: initial;
+}
+
+.lines div {
+    height: 3px;
+    width: 25px;
+}
+
+.toggle .line-1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+    cursor: pointer;
+}
+
+.toggle .line-3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+    cursor: pointer;
+}
 
 /* Styling för index.html (Mobilsida) */
 
-    #grid_wrapper_index {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 50px 500px 1fr; 
-    grid-template-areas:
-    "he"
-    "na"
-    "a1"
-    "fo" ;
-    }
+#grid_wrapper_index {
+grid-template-columns: 1fr;
+grid-template-rows: auto 50px 500px 1fr; 
+grid-template-areas:
+"he"
+"na"
+"a1"
+"fo" ;
+}
 
-    #article_1_index {
-        border-radius: 0px;
-        background-color: white;
-        margin: 10px;
-    }
+#article_1_index {
+    border-radius: 0px;
+    background-color: white;
+    margin: 10px;
+}
 
-    #apples {
-        height: 100%;
-        width: 100%;
-    }
+#apples {
+    height: 100%;
+    width: 100%;
+}
 
-    #image_shadow {
-        height: 50%;
-    }
+#image_shadow {
+    height: 50%;
+}
 
-    #banner_rubrik {
-        top: 20px;
-    }
+#banner_rubrik {
+    top: 20px;
+}
 
-    #banner_rubrik_2 {
-        top: 3px;
-    }
+#banner_rubrik_2 {
+    top: 3px;
+}
 
-    #text_index {
-        display: block;
-        top: 15%;
-        padding-left: 10px!important;
-    }
+#text_index {
+    display: block;
+    top: 15%;
+    padding-left: 10px!important;
+}
 
-    #text_index_2 {
-        display: block;
-        padding-left: 10px!important;
-    }
+#text_index_2 {
+    display: block;
+    padding-left: 10px!important;
+}
 
-    #text_index_420 {
-        display: none;
-    }
+#text_index_420 {
+    display: none;
+}
 
-    #text_index_420_2 {
-        display: none;
-    }
+#text_index_420_2 {
+    display: none;
+}
 
-    #text_desktop, #text_desktop_2 {
-        display: none;
-    }
+#text_desktop, #text_desktop_2 {
+    display: none;
+}
 
-    #article_2_index {
-        display: none;
-    }
+#article_2_index {
+    display: none;
+}
 
 /* Styling för kontakt.html (Mobilsida) */
 
@@ -1002,8 +1002,8 @@ footer {
 
 /* Styling för jobba_hos_oss.html (Mobilsidan) */
 
-#grid_wrapper_jobb {
-    grid-template-rows: auto 60px auto auto 1fr; 
+    #grid_wrapper_jobb {
+        grid-template-rows: auto 60px auto auto 1fr; 
     }
 
     #article_jobb h1, h2 {
@@ -1022,23 +1022,23 @@ footer {
     .work_tasks {
         font-size: 20px;
     }
-    
+
     #section_jobb {
         display: block;
     }
-    
+
     #image_holder_1 {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
+
     #image_holder_2 {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
+
     #image_holder_3 {
         display: flex;
         justify-content: center;
@@ -1048,7 +1048,7 @@ footer {
     #article_1_index p, h2 {
         padding: 0px;
     }
-    
+
     #tasks {
         display:none;
     }
@@ -1059,7 +1059,7 @@ footer {
 
 /* Ytterliggare en styling för mobil layout med Media queries så att vissa layout inte kraschar (Små skärmar med liten bredd) */
 
-/* Media query min 270px och max 450px */
+/* Media query max 420px */
 
 @media only screen and (max-width: 420px) {
 
@@ -1142,7 +1142,28 @@ footer {
     
     .mobil-links {
         top: 21%;
-    }   
+    }
+
+    .titles p {
+        font-size: 4vw;
+    }
+
+    #article_jobb {
+        height: auto;
+    }
+
+    .image_holder img {
+        width: 70vw!important;
+        height: 40vh!important;
+    }
+
+    #article_jobb h1, h2 {
+        font-size: 6vw;
+    }
+
+    .work_tasks {
+        font-size: 6vw;
+    }
 }
 
 @media only screen and (max-width: 200px) {
@@ -1162,5 +1183,18 @@ footer {
     #text_index_200, #text_index_200_2 {
         display: block;
         top: 15%;
+    }
+
+    .image_holder img {
+        width: 80vw!important;
+        height: 20vh!important;
+    }
+
+    #article_jobb h1, h2 {
+        font-size: 10vw;
+    }
+
+    .work_tasks {
+        font-size: 10vw;
     }
 }
