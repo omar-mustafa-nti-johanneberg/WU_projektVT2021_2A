@@ -1084,6 +1084,20 @@ grid-template-areas:
     #article_jobb {
         height: 160px;
     }
+
+    .produkt_info {
+        height: auto;
+        max-width: auto!important;
+    }
+
+    .produkt_info h2 {
+        font-size: 18px;
+    }
+
+    .produkt_bilder img {
+        height: 45vh!important;
+        max-width: 45vw;
+    }
 }
 
 @media only screen and (max-width: 300px) {
@@ -1163,6 +1177,20 @@ grid-template-areas:
 
     .work_tasks {
         font-size: 6vw;
+    }
+
+    .produkt_info {
+        height: auto;
+        max-width: auto;
+    }
+
+    .produkt_info h2 {
+        font-size: 18px;
+    }
+
+    .produkt_bilder img {
+        height: 50vh!important;
+        max-width: 47vw!important;
     }
 }
 
