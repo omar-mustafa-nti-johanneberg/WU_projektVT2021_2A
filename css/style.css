@@ -1189,8 +1189,13 @@ grid-template-areas:
     }
 
     .produkt_bilder img {
-        height: 50vh!important;
+        height: 64vh!important;
         max-width: 47vw!important;
+    }
+
+    .produkt_beskrivning_mobil p {
+        font-size: 5vw;
+        padding-top: 10px;
     }
 }
 
@@ -1224,5 +1229,18 @@ grid-template-areas:
 
     .work_tasks {
         font-size: 10vw;
+    }
+
+    .produkt_info h2 {
+        font-size: 8vw;
+    }
+
+    .produkt_beskrivning_mobil {
+        font-size: 7vw;
+    }
+
+    .produkt_beskrivning_mobil p {
+        font-size: 6vw;
+        padding-top: 10px;
     }
 }
