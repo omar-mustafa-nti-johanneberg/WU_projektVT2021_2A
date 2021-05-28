@@ -228,7 +228,7 @@ footer {
 
 #company_name {
     position: relative;
-    font-style: bold;
+    font-weight: bold;
     left: 10px;
     margin: 10px 0px 10px 0px;
     padding-bottom: 5px;
