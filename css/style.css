@@ -9,7 +9,8 @@
     font-family: 'Roboto', sans-serif;
 
 }
-.produkt_bilder{
+
+.produkt_bilder {
     position: relative;
     text-align: center;
 }
@@ -18,7 +19,7 @@
     position: absolute;
     top:0;
     right: 0;
-    font-size: 45px;
+    font-size: 35px;
     background-color: #e60019;
     color: #f1f1f1;
     font-weight: 600;
@@ -531,7 +532,7 @@ footer {
     "na"
     "se"
     "fo";
-    }
+}
 
 #section_produkter {
     display: grid;
@@ -765,7 +766,7 @@ footer {
 /* Generell styling för alla mobilsidor */
 
 .pris {
-    font-size: 30px;
+    font-size: 3.5vw;
 }
 
 header {
@@ -1081,6 +1082,10 @@ grid-template-areas:
 
 @media only screen and (max-width: 420px) {
 
+    .pris {
+        font-size: 5vw;
+    }
+
     #text_index {
         display: none;
     }
@@ -1119,6 +1124,29 @@ grid-template-areas:
 }
 
 @media only screen and (max-width: 300px) {
+
+    #section_produkter {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "h1"
+        "t1"
+        "t2"
+        "t3"
+        "t4";
+    }
+
+    .produkt_bilder {
+        display: none;
+    }
+
+    .pris {
+        font-size: 4vw;
+        width: 20px;
+    }
+
+    #produkt_katalog {
+        font-size: 10vw!important;
+    }
 
     #banner_rubrik {
         font-size: 18px;
