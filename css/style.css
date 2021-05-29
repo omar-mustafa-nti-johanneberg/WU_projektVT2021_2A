@@ -445,6 +445,7 @@ footer {
 
 #section_1_kontakt h2 {
     position: relative;
+    font-size: 22px;
     top: 30px;
     margin: 0px;
 }
@@ -713,6 +714,12 @@ footer {
     text-align: center;
 }
 
+.image_holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #title_1 {
     grid-area: t1;
     background-color: lightsalmon;
@@ -721,6 +728,7 @@ footer {
 #image_holder_1 {
     grid-area: i1;
     background-color: lightsalmon;
+    height: auto;
 }
 
 #title_2 {
@@ -745,19 +753,10 @@ footer {
 
 /* Styling av bilderna */
 
-.images {
-    position: relative;
-    margin: 10px 0px 10px 0px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-} 
-
-#image_1 {
+/* #image_1 {
     width: 300px;
     height: 300px;
-}
-
+} */
 
 /* Styling för mobil layout med Media queries */
 
@@ -1046,22 +1045,8 @@ grid-template-areas:
         display: block;
     }
 
-    #image_holder_1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #image_holder_2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #image_holder_3 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .images {
+        padding-bottom: 10px;
     }
 
     #article_1_index p, h2 {
@@ -1081,6 +1066,19 @@ grid-template-areas:
 /* Media query max 420px */
 
 @media only screen and (max-width: 420px) {
+
+    #section_1_kontakt h2, h3 {
+        font-size: 5.5vw!important;
+    }
+
+    #section_1_kontakt p {
+        font-size: 5vw!important;
+    }
+
+    .fruit_images {
+        width: 90%;
+        height: auto;
+    }
 
     #section_produkter {
         grid-template-columns: 1fr;
@@ -1114,10 +1112,6 @@ grid-template-areas:
         padding-left: 10px!important;
     }
 
-    .fruit_images {
-        width: 90%;
-    }
-
     #article_jobb {
         height: 160px;
     }
@@ -1138,6 +1132,14 @@ grid-template-areas:
 }
 
 @media only screen and (max-width: 300px) {
+
+    #section_1_kontakt h2, h3 {
+        font-size: 8vw!important;
+    }
+
+    #section_1_kontakt p {
+        font-size: 7vw!important;
+    }
 
     #documentation_link {
         font-size: 7vw;
@@ -1199,7 +1201,8 @@ grid-template-areas:
     }
 
     .fruit_images {
-        width: 100%;
+        width: 90%;
+        height: auto;
     }
 
     #article_jobb {
@@ -1227,7 +1230,7 @@ grid-template-areas:
     }
 
     .titles p {
-        font-size: 4vw;
+        font-size: 6vw;
     }
 
     #article_jobb {
@@ -1235,8 +1238,11 @@ grid-template-areas:
     }
 
     .image_holder img {
-        width: 70vw!important;
-        height: 40vh!important;
+        display: none;
+    }
+
+    .task_description {
+        font-size: 6vw;
     }
 
     #article_jobb h1, h2 {
@@ -1269,6 +1275,14 @@ grid-template-areas:
 
 @media only screen and (max-width: 200px) {
 
+    #section_1_kontakt h2, h3 {
+        font-size: 10vw!important;
+    }
+
+    #section_1_kontakt p {
+        font-size: 8vw!important;
+    }
+
     #documentation_link {
         font-size: 9vw;
     }
@@ -1300,11 +1314,11 @@ grid-template-areas:
     }
 
     #article_jobb h1, h2 {
-        font-size: 10vw;
+        font-size: 7vw;
     }
 
     .work_tasks {
-        font-size: 10vw;
+        font-size: 7vw;
     }
 
     .produkt_info h2 {
