@@ -699,8 +699,6 @@ footer {
 
 #tasks {
     text-align: center;
-    position: relative;
-    top: 60px;
 }
 
 .titles {
@@ -758,17 +756,16 @@ footer {
 
 /* Styling av bilderna */
 
-/* #image_1 {
+#image_1 {
     width: 300px;
     height: 300px;
-} */
+}
 
 /* Styling för mobil layout med Media queries */
 
 @media only screen and (max-width: 900px)  {
 
 /* Generell styling för alla mobilsidor */
-
 
 .images {
     width: auto;
@@ -1064,9 +1061,6 @@ grid-template-areas:
         padding: 0px;
     }
 
-    #tasks {
-        display:none;
-    }
     #article_jobb {
         height: 140px;
     }
