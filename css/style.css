@@ -650,6 +650,11 @@ footer {
     margin-top: 5px;
 }
 
+.images {
+    width: 100%;
+    height: 100%;
+}
+
 /* Styling för jobba_hos_oss.html (Desktop) */
 
 #grid_wrapper_jobb {
@@ -1047,10 +1052,6 @@ grid-template-areas:
 
     #section_jobb {
         display: block;
-    }
-
-    .images {
-        padding-bottom: 10px;
     }
 
     #article_1_index p, h2 {
