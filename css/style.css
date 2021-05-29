@@ -764,6 +764,10 @@ footer {
 
 /* Generell styling för alla mobilsidor */
 
+#documentation_link {
+    text-decoration: underline;
+}
+
 .pris {
     font-size: 3.5vw;
 }
@@ -1067,6 +1071,10 @@ grid-template-areas:
 
 @media only screen and (max-width: 420px) {
 
+    #documentation_link {
+        text-decoration: underline;
+    }
+
     #section_1_kontakt h2, h3 {
         font-size: 5.5vw!important;
     }
@@ -1143,6 +1151,7 @@ grid-template-areas:
 
     #documentation_link {
         font-size: 7vw;
+        text-decoration: underline;
     }
 
     #copyright {
