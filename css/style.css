@@ -769,6 +769,12 @@ footer {
 
 /* Generell styling för alla mobilsidor */
 
+
+.images {
+    width: auto;
+    height: auto;
+}
+
 #documentation_link {
     text-decoration: underline;
 }
