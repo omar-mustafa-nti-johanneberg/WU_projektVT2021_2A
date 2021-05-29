@@ -826,7 +826,7 @@ header {
 .mobil-links {
     display: block;
     position: absolute;
-    left: -300%;  
+    left: -500%;  
     height: 100%;
     width: 230px;
     background-color: white;
@@ -848,7 +848,7 @@ header {
 }
 
 .nav-active {
-    left:0;
+    left: 0;
     transition: all 0.7s;
     z-index: 4;
 }
@@ -1082,6 +1082,20 @@ grid-template-areas:
 
 @media only screen and (max-width: 420px) {
 
+    #section_produkter {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "h1"
+        "t1"
+        "t2"
+        "t3"
+        "t4";
+    }
+
+    .produkt_bilder {
+        display: none;
+    }
+
     .pris {
         font-size: 5vw;
     }
@@ -1124,6 +1138,14 @@ grid-template-areas:
 }
 
 @media only screen and (max-width: 300px) {
+
+    #documentation_link {
+        font-size: 7vw;
+    }
+
+    #copyright {
+        font-size: 7vw;
+    }
 
     #section_produkter {
         grid-template-columns: 1fr;
@@ -1246,6 +1268,14 @@ grid-template-areas:
 }
 
 @media only screen and (max-width: 200px) {
+
+    #documentation_link {
+        font-size: 9vw;
+    }
+
+    #copyright {
+        font-size: 9vw;
+    }
     
     #text_index_300 {
         display: none;
