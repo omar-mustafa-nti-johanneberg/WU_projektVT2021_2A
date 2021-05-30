@@ -1251,7 +1251,7 @@ grid-template-areas:
     }
 
     .mobil-links > li > a {
-        font-size: 12vw!important;
+        font-size: 9vw!important;
     }
 
     .titles p {
@@ -1299,6 +1299,10 @@ grid-template-areas:
 }
 
 @media only screen and (max-width: 200px) {
+
+    #image_shadow {
+        display: none;
+    }
 
     .mobil-links > li > a {
         font-size: 10vw!important;
@@ -1375,7 +1379,7 @@ grid-template-areas:
 @media screen and (max-width: 100px) {
 
     .mobil-links > li > a {
-        font-size: 20vw!important;
+        font-size: 16vw!important;
     }
 
     .titles p {
