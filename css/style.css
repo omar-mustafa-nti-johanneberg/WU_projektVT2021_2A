@@ -495,13 +495,24 @@ footer {
     height: 100vh;
     gap: 0;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 60px auto 1fr; 
+    grid-template-rows: auto 60px auto auto 1fr; 
     grid-template-areas:
     "he"
     "na"
+    "di"
     "s1"
     "fo";
     }
+
+#fruit_title {
+    grid-area: di;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(68, 176, 248);
+    height: 100px;
+}
 
 #section_1_bilder {
     grid-area: s1;
@@ -969,11 +980,12 @@ grid-template-areas:
 
 #grid_wrapper_bilder {
     grid-template-columns: 1fr;
-    grid-template-rows: auto 50px auto 1fr; 
+    grid-template-rows: auto 50px auto auto 1fr; 
     height: 100vh;
     grid-template-areas:
     "he"
     "na"
+    "di"
     "s1"
     "fo" ;
     }
