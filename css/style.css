@@ -746,12 +746,12 @@ footer {
 
 #title_2 {
     grid-area: t2;
-    background-color: rgb(71, 231, 124);
+    background-color: rgb(182, 234, 232);
 }
 
 #image_holder_2 {
     grid-area: i2;
-    background-color: rgb(71, 231, 124);
+    background-color: rgb(182, 234, 232);
 }
 
 #title_3 {
