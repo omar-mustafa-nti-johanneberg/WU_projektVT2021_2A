@@ -1236,7 +1236,11 @@ grid-template-areas:
     }
     
     .mobil-links {
-        top: 21%;
+        top: 28%;
+    }
+
+    .mobil-links > li > a {
+        font-size: 12vw!important;
     }
 
     .titles p {
@@ -1284,6 +1288,10 @@ grid-template-areas:
 }
 
 @media only screen and (max-width: 200px) {
+
+    .mobil-links > li > a {
+        font-size: 10vw!important;
+    }
 
     #section_1_kontakt h2, h3 {
         font-size: 10vw!important;
@@ -1342,5 +1350,28 @@ grid-template-areas:
     .produkt_beskrivning_mobil p {
         font-size: 6vw;
         padding-top: 10px;
+    }
+
+    .titles p {
+        font-size: 7vw;
+    }
+
+    #article_jobb h2 {
+        font-size: 9vw;
+    }
+}
+
+@media screen and (max-width: 100px) {
+
+    .mobil-links > li > a {
+        font-size: 20vw!important;
+    }
+
+    .titles p {
+        font-size: 10vw;
+    }
+    
+    #article_jobb h2 {
+        font-size: 10vw;
     }
 }
