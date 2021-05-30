@@ -138,7 +138,6 @@ header {
     position: sticky;
     top: 0;
     z-index: 2;
-    box-shadow: -1px 1px 0 #939393;
     display: flex;
     align-items: center;
 }
@@ -510,7 +509,8 @@ footer {
     text-align: center;
     justify-content: center;
     align-items: center;
-    background-color: rgb(68, 176, 248);
+    background-color: #dd3636;
+    color: white;
     height: 100px;
 }
 
